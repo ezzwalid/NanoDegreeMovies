@@ -1,0 +1,156 @@
+<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/detail_fragment_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/detail_fragment_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="jhhjhjjhhjgjhg"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:id="@+id/detail_fragment_info_date_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_fragment_description"
+                android:layout_alignLeft="@id/detail_fragment_description"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="Release Date: "/>
+            <TextView
+                android:id="@+id/detail_fragment_info_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/detail_fragment_info_date_demo"
+                android:layout_alignTop="@id/detail_fragment_info_date_demo"
+                android:textColor="#000000"
+                android:text="Novamber,20,2016"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_fragment_info_date_demo"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/detail_fragment_info_rate_demo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Rate: "/>
+
+                <RatingBar
+                    android:id="@+id/detail_fragment_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/rate_bar_style"
+                    android:layout_alignTop="@id/detail_fragment_info_rate_demo"
+                    android:layout_toRightOf="@id/detail_fragment_info_rate_demo"
+                    android:numStars="5"
+                    android:rating="3"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+        <View
+            android:id="@+id/detail_fragment_divider_info"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D4D4D4"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/detail_fragment_info_container"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <FrameLayout
+            android:id="@+id/details_fragment_trailer_list_conainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_fragment_divider_info">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/details_fragment_trailer_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"/>
+
+            <ProgressBar
+                android:id="@+id/details_fragment_trailer_recycler_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+
+
+
+        <View
+            android:id="@+id/detail_fragment_divider_video"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D4D4D4"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/details_fragment_trailer_list_conainer"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_fragment_divider_video">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/review_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:layout_gravity="center"/>
+
+            <ProgressBar
+                android:id="@+id/review_recycler_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
